@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>formulari</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg-formulari">
+  <ion-content class="formulari">
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="tipus" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Autor</ion-label>
+      <ion-input [(ngModel)]="tipus" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Categoria</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Tomo</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+    <ion-button expand="full">
+      <ion-icon lazy="true" slot="start" name="image"></ion-icon>
+      <ion-label slot="end">Upload Image</ion-label>
+      <input type="file" (change)="loadImageFromDevice($event)" id="file-input" accept="image/png, image/jpeg">
+    </ion-button>
+    <ion-button type="button" (click)="addManga()">Add Manga</ion-button>
+  </ion-content>
+  <ion-content class="addMangaTuto">
+    <ion-item>
+      <ion-label>
+        <h2>Añade un Manga!!</h2>
+        <ul>
+          <li>Tienes que rellenar los campos con los datos que se te pide.</li>
+          <li>Elijes la portada del maga a añadir.</li>
+          <li>Y listo añadido a tu lista de magas!!</li>
+        </ul>
+      </ion-label>
+    </ion-item>
+  </ion-content>
+</ion-content>

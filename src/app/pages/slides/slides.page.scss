@@ -1,0 +1,30 @@
+#slides{
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.btn_inc{
+    position: absolute;
+    z-index: 999;
+    bottom: 10px;
+    right: 10px;
+}
+
+.button-native{
+    background: coral;
+}
+
+#slides_bg{
+    width: 350px;
+    top: 5%;
+}
+
+#logo{
+    width: 100px;
+    top: 8%;
+    position: absolute;
+    left: 40%;
+    z-index: 999;
+}
+

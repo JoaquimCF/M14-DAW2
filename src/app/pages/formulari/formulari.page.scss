@@ -1,0 +1,38 @@
+.formulari{
+    width: 500px;
+    height:315px;
+    align-items: center;
+    top:2%;
+    left: 5%;
+}
+.bg-formulari{
+    --background: url("/assets/img/bg-form.png") no-repeat;
+    background-size: 100px 100px;
+
+}
+.addMangaTuto{
+    width: 505px;
+    height: 131px;
+    left: 75px;
+    top: 30px;
+}
+@media (max-width: 812px){
+    .formulari{
+        width: 344px;
+        height: 380px;
+        align-items: center;
+        top: 2%;
+        left: 5%;
+    }
+    .bg-formulari{
+        --background: url("/assets/img/bg-form.png") no-repeat;
+        background-size: 100px 100px;
+    
+    }
+    .addMangaTuto{
+        width: 505px;
+        height: 131px;
+        left: 20px;
+        top: 30px;
+    } 
+}
