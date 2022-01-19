@@ -1,54 +1,33 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>llistat</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titol="llistat" bgcolor="secondary"></app-header>
 
 <ion-content>
   <ion-list>
-    <ion-item class="item-1">
-      <ion-avatar slot="start">
-        <img src="../../assets/img/naruto.png">
-      </ion-avatar>
-        <ion-label>
-          <h2>Naruto</h2>
-          <p>Shonen</p>
-          <p>Masashi Kishimoto</p>
-          <p>01</p>
-        </ion-label>
-    </ion-item>
-    <ion-item class="item-2">
-      <ion-avatar slot="start">
-        <img src="../../assets/img/magi-tomo-01.png">
-      </ion-avatar>
-        <ion-label>
-          <h2>Magi</h2>
-          <p>Shonen</p>
-          <p>Shinobu Ohtaka</p>
-          <p>01</p>
-        </ion-label>
-    </ion-item>
-    <ion-item class="item-3">
-      <ion-avatar slot="start">
-        <img src="../../assets/img/one-piece-01.png">
-      </ion-avatar>
-        <ion-label>
-          <h2>One piece</h2>
-          <p>Shonen</p>
-          <p>Eiichirō Oda</p>
-          <p>01</p>
-        </ion-label>
-    </ion-item>
-    <ion-item class="item-4">
-      <ion-avatar slot="start">
-        <img src="../../assets/img/tate-no-yuusha.png">
-      </ion-avatar>
-        <ion-label>
-          <h2>Tate no yuusha</h2>
-          <p>Shonen</p>
-          <p>Aneko Yusagi</p>
-          <p>01</p>
-        </ion-label>
-    </ion-item>
+    <div *ngFor="let mg of mangas; let i=index">
+      <ion-item-sliding>
+        <ion-item-options side="start">
+          <ion-item-option color="danger" (click)="deleteManga(mg.id)">
+            Delete
+          </ion-item-option>
+        </ion-item-options>
+        <ion-item routerLink="/detail/{{i}}">
+          
+        <!-- <ion-avatar slot="start">
+          <img src="./assets/img/{{es.img}}">
+        </ion-avatar> -->
+          <ion-label>
+            <h2>Nom manga: {{mg.nom}}</h2>
+            <p>Autor: {{mg.autor}}</p>
+            <p>Categoria: {{mg.categoria}}</p>
+            <p>Volum: {{mg.volum}}</p>
+            <img src="{{mg.imatge}}">
+          </ion-label>
+        </ion-item>
+        <ion-item-options side="end">
+          <ion-item-option color="tertiary" expandable>
+            Archive
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+      </div>
   </ion-list>
 </ion-content>

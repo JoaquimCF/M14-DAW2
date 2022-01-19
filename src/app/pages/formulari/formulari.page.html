@@ -1,32 +1,26 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>formulari</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header titol="formulari" bgcolor="secondary"></app-header>
 
 <ion-content class="bg-formulari">
   <ion-content class="formulari">
     <ion-item>
       <ion-label position="floating">Nombre</ion-label>
-      <ion-input [(ngModel)]="tipus" type="text"></ion-input>
+      <ion-input [(ngModel)]="nom" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Autor</ion-label>
-      <ion-input [(ngModel)]="tipus" type="text"></ion-input>
+      <ion-input [(ngModel)]="autor" type="text"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Categoria</ion-label>
-      <ion-input></ion-input>
+      <ion-input [(ngModel)]="categoria" type="text"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Tomo</ion-label>
-      <ion-input></ion-input>
+      <ion-label position="floating">volum</ion-label>
+      <ion-input [(ngModel)]="volum" type="text"></ion-input>
     </ion-item>
-    <ion-button expand="full">
-      <ion-icon lazy="true" slot="start" name="image"></ion-icon>
-      <ion-label slot="end">Upload Image</ion-label>
-      <input type="file" (change)="loadImageFromDevice($event)" id="file-input" accept="image/png, image/jpeg">
-    </ion-button>
+    <ion-item>
+      <input type="file" [(ngModel)]="imatge" (change)="selectedFile($event)" />
+   </ion-item>
     <ion-button type="button" (click)="addManga()">Add Manga</ion-button>
   </ion-content>
   <ion-content class="addMangaTuto">
