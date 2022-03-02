@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'llistat',
     loadChildren: () => import('./pages/llistat/llistat.module').then( m => m.LlistatPageModule)
   },
+  {
+    path: 'infinite-scroll',
+    loadChildren: () => import('./infinite-scroll/infinite-scroll.module').then( m => m.InfiniteScrollPageModule)
+  },
 ];
 
 @NgModule({

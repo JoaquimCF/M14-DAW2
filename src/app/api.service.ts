@@ -22,4 +22,8 @@ export class ApiService {
     return this.http.get('http://localhost/ionic_backend/read.php');
   }
 
+  apiManga(data){
+    return this.http.post('http://localhost/ionic_backend/api.php', data);
+  }
+
 }
